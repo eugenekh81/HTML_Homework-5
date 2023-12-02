@@ -23,7 +23,7 @@
 
   color: var(--text-black-color);
 
-  transition: color 0.2s linear;
+  transition: color 250ms var(--cubic-bezier-easing);
 }
 
 .nav__link:focus,

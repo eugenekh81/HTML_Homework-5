@@ -22,7 +22,7 @@
 
   color: var(--text-grey-color);
 
-  transition: color 0.3s linear;
+  transition: color 250ms var(--cubic-bezier-easing);
 }
 
 .contacts__link--footer {

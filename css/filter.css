@@ -21,7 +21,8 @@
   background-color: var(--background-grey-color);
   color: var(--text-black-color);
 
-  transition: color 0.2s linear, background-color 0.2s linear;
+  transition: color 250ms var(--cubic-bezier-easing),
+    background-color 250ms var(--cubic-bezier-easing);
 }
 
 .filter__button:focus,

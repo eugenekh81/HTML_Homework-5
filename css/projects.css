@@ -5,7 +5,7 @@
 }
 
 .projects__item {
-  transition: box-shadow 0.3s linear;
+  transition: box-shadow 250ms var(--cubic-bezier-easing);
 }
 
 .projects__item-image {

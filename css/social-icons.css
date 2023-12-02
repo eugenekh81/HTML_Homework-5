@@ -37,7 +37,7 @@
   border-radius: 50%;
   background-color: #fff;
 
-  transition: background-color 0.2s linear;
+  transition: background-color 250ms var(--cubic-bezier-easing);
 }
 
 .social-icons__link:hover {
@@ -48,7 +48,7 @@
   width: 20px;
   height: 20px;
 
-  transition: color 0.2s linear;
+  transition: color 250ms var(--cubic-bezier-easing);
 
   color: var(--svg-grey-color);
 }
