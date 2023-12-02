@@ -8,8 +8,10 @@
   transition: box-shadow 250ms var(--cubic-bezier-easing);
 }
 
-.projects__item-image {
-  vertical-align: top;
+
+
+.projects__image {
+  display: block;
 
   width: 370px;
   height: 294px;
