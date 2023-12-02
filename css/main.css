@@ -22,4 +22,6 @@
 
 @import "./filter.css";
 @import "./projects.css";
-@import "./overlay-projects.css"
+@import "./overlay-projects.css";
+
+@import "./modal.css";
