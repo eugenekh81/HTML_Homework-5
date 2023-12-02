@@ -1,0 +1,23 @@
+@import "./reset.css";
+@import "./vars.css";
+@import "./container.css";
+@import "./page.css";
+@import "./button.css";
+@import "./title.css";
+
+@import "./icon.css";
+@import "./header.css";
+@import "./logo.css";
+@import "./nav.css";
+@import "./contacts.css";
+@import "./section.css";
+@import "./hero.css";
+@import "./features.css";
+@import "./services.css";
+@import "./team.css";
+@import "./social-icons.css";
+@import "./clients-icons.css";
+@import "./footer.css";
+
+@import "./filter.css";
+@import "./projects.css";
