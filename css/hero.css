@@ -53,6 +53,17 @@
   color: #fff;
   background-color: var(--main-blue-color);
 
-  border: none;
+  border: 2px solid var(--main-blue-color);
   border-radius: 4px;
+
+  transition: border 250ms var(--cubic-bezier-easing),
+    background-color 250ms var(--cubic-bezier-easing),
+    color 250ms var(--cubic-bezier-easing);
+}
+
+.hero__button:focus,
+.hero__button:hover {
+  border: 2px solid var(--main-blue-color);
+  background-color: #fff;
+  color: var(--main-blue-color);
 }
