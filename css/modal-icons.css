@@ -1,0 +1,14 @@
+.modal-icons {
+  width: 30px;
+  height: 30px;
+}
+
+.modal-close {
+  margin: 8px 8px 0 0;
+}
+
+.modal-icons__container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
