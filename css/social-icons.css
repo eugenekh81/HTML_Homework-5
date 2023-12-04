@@ -40,6 +40,7 @@
   transition: background-color 250ms var(--cubic-bezier-easing);
 }
 
+.social-icons__link:focus,
 .social-icons__link:hover {
   background-color: var(--main-blue-color);
 }
@@ -53,6 +54,7 @@
   color: var(--svg-grey-color);
 }
 
+.social-icons__link:focus .social-icons__svg,
 .social-icons__link:hover .social-icons__svg {
   color: #fff;
 }

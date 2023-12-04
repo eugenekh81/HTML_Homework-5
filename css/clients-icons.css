@@ -30,10 +30,12 @@
   transition: color 250ms var(--cubic-bezier-easing);
 }
 
+.client-icons__item a:focus,
 .client-icons__item:hover {
   border-color: var(--main-blue-color);
 }
 
+.client-icons__item a:focus .client-icons__svg,
 .client-icons__item:hover .client-icons__svg {
   color: var(--main-blue-color);
 }
