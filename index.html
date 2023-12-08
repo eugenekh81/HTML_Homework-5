@@ -22,8 +22,8 @@
           </a>
           <nav class="header__nav">
             <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="./index.html">Студія</a>
+              <li class="nav__item ">
+                <a class="nav__link is-active" href="./index.html">Студія</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="./portfolio.html">Портфоліо</a>
@@ -57,7 +57,7 @@
         <div class="container">
           <div class="hero__content">
             <h1 class="hero__title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-            <button name="button" class="hero__button">Замовити послугу</button>
+            <button data-open-modal name="button" class="hero__button">Замовити послугу</button>
           </div>
         </div>
       </section>
@@ -124,17 +124,29 @@
           <h2 class="services__title">Чим ми займаємося</h2>
           <ul class="services__list">
             <li class="services__list-item">
-              <img src="./images/major_imges/img_1.jpg" alt="написання коду" />
+              <div class="services__list-container">
+                <img class="services__list-image" src="./images/major_imges/img_1.jpg" alt="написання коду" />
+
+                <p class="services__list-text">Десктопні додатки</p>
+
+              </div>
             </li>
             <li class="services__list-item">
-              <img
-                src="./images/major_imges/img_2.jpg"
-                alt="адаптація під екран телефону"
-              />
+                  <div    class="services__list-container">
+                       <img class="services__list-image" 
+                         src="./images/major_imges/img_2.jpg"
+                         alt="адаптація під екран телефону"
+                       />
+                       <p class="services__list-text">Мобільні додатки</p>
+                   </div> 
             </li>
             <li class="services__list-item">
-              <img src="./images/major_imges/img_3.jpg" alt="палітра кольорів" />
+                  <div    class="services__list-container">
+                    <img class="services__list-image" src="./images/major_imges/img_3.jpg" alt="палітра кольорів" />
+                       <p class="services__list-text">Дизайнерські рішення</p>
+                   </div>
             </li>
+
           </ul>
         </div>
       </section>
@@ -367,7 +379,19 @@
           </ul>
         </div>
       </section>
+      <div class="backdrop backdrop--hidden" data-backdrop>
+        <div class="modal">
+          <button data-close-modal class="close__button">
+            <svg class="close">
+              <use href="./images/svg/icons.svg#close"></svg>
+          </button>
+          <p class="modal__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore tempora odio vitae harum optio voluptatem, explicabo vero, soluta facere nihil voluptates expedita repellendus, cupiditate ea totam hic doloribus voluptate iste. Aut id, cum odit sit asperiores eum accusamus ducimus reprehenderit.</p>
+        </div>
+
+
+      </div>
     </main>
+     
     <footer class="footer">
       <div class="container">
         <div class="footer__content">
@@ -391,6 +415,7 @@
               >
             </div>
           </div>
+         
           <div class="footer__socials">
             <h2 class="footer__socials-title">приєднуйтесь</h2>
                   <div class="social">
@@ -429,5 +454,30 @@
           </div>
       </div>
     </footer>
+
+    <script>
+
+            const refs = {
+            openModalBtn: document.querySelector("[data-open-modal]"),
+            closeModalBtn: document.querySelector("[data-close-modal]"),
+            modal: document.querySelector('.modal'),
+            backdrop: document.querySelector("[data-backdrop]"),
+            };
+
+            refs.openModalBtn.addEventListener("click", toggleModal);
+            refs.closeModalBtn.addEventListener("click", toggleModal);
+
+            refs.backdrop.addEventListener("click", LogBackdropClick);
+
+            function toggleModal() {
+              refs.backdrop.classList.toggle("backdrop--hidden");
+              refs.modal.classList.toggle('modal--open');
+              /* document.body.classList.toggle('page__body--no-scroll'); */
+            }
+
+            function logBackdropClick() {
+              console.log("Это клик в бекдроп");
+            }
+          </script>
   </body>
 </html>
