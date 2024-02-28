@@ -1,3 +1,6 @@
+<!-- TODO: FIX POINTS ITEMS - MAKE ICON AND TEXT ONE LI ELEMENT -->
+<!-- TODO: FIX TEAM IMG CLASSES  -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
   </head>
 
   <body>
@@ -68,60 +72,64 @@
 
       <section class="section points">
         <div class="container">
-          <div class="points__content">
-            <ul class="points__icon-list">
-              <li class="points__icon-item">
+          <ul class="points__list">
+            <li class="points__item">
+              <div class="points__icon-item">
                 <svg class="points__icon">
                   <use href="./images/sprite.svg#antenna"></use>
                 </svg>
-              </li>
-              <li class="points__icon-item">
-                <svg class="points__icon">
-                  <use href="./images/sprite.svg#clock"></use>
-                </svg>
-              </li>
-              <li class="points__icon-item">
-                <svg class="points__icon">
-                  <use href="./images/sprite.svg#diagram"></use>
-                </svg>
-              </li>
-              <li class="points__icon-item">
-                <svg class="points__icon">
-                  <use href="./images/sprite.svg#astronaut"></use>
-                </svg>
-              </li>
-            </ul>
-            <ul class="points__list">
-              <li class="points__item">
+              </div>
+              <div class="points__item-text">
                 <h3 class="points__title">УВАГА ДО ДЕТАЛЕЙ</h3>
                 <p class="points__text">
                   Ідейні міркування, і навіть початок повсякденної роботи з
                   формування позиції.
                 </p>
-              </li>
-              <li class="points__item">
+              </div>
+            </li>
+            <li class="points__item">
+              <div class="points__icon-item">
+                <svg class="points__icon">
+                  <use href="./images/sprite.svg#clock"></use>
+                </svg>
+              </div>
+              <div class="points__item-text">
                 <h3 class="points__title">ПУНКТУАЛЬНІСТЬ</h3>
                 <p class="points__text">
                   Завдання організації, особливо рамки і місце навчання кадрів
                   тягне у себе.
                 </p>
-              </li>
-              <li class="points__item">
+              </div>
+            </li>
+            <li class="points__item">
+              <div class="points__icon-item">
+                <svg class="points__icon">
+                  <use href="./images/sprite.svg#diagram"></use>
+                </svg>
+              </div>
+              <div class="points__item-text">
                 <h3 class="points__title">ПЛАНУВАННЯ</h3>
                 <p class="points__text">
                   Так само консультація з широким активом значною мірою
                   зумовлює.
                 </p>
-              </li>
-              <li class="points__item">
+              </div>
+            </li>
+            <li class="points__item">
+              <div class="points__icon-item">
+                <svg class="points__icon">
+                  <use href="./images/sprite.svg#astronaut"></use>
+                </svg>
+              </div>
+              <div class="points__item-text">
                 <h3 class="points__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
                 <p class="points__text">
                   Значимість цих проблем настільки очевидна, що реалізація
                   планових завдань.
                 </p>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -200,7 +208,7 @@
             <li class="team__item person">
               <div class="person__img-container">
                 <img
-                  class="person"
+                  class="person__img"
                   src="./images/team-2.jpg"
                   alt="Olga Repina"
                 />
@@ -407,5 +415,15 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal">
+      <div class="modal__window">
+        <button class="modal__button" type="button">
+          <svg class="modal__cross">
+            <use href="./images/sprite.svg#cross" />
+          </svg>
+        </button>
+      </div>
+    </div>
   </body>
 </html>

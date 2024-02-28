@@ -206,13 +206,18 @@ a {
 .points__item {
   width: 270px;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .points__title {
   color: #212121;
-  height: 16px;
   margin-bottom: 10px;
   font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
 }
 
 .points__text {
@@ -434,7 +439,36 @@ a {
   height: 404px;
 }
 
+.category__img-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.category__img {
+  display: flex;
+}
+
+.hidden-text {
+  background: #2196f3e5;
+  position: absolute;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  top: 0;
+}
+
+.features__item:hover .hidden-text {
+  transform: translateY(0);
+}
+
 .category {
+  cursor: pointer;
 }
 
 .category__content {
@@ -627,4 +661,72 @@ a {
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+}
+
+.modal {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  background-color: #00000080;
+  transition: all 0.3s ease;
+
+  pointer-events: none;
+}
+
+.modal--is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__window {
+  width: 528px;
+  height: 580px;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  background-color: #fff;
+  position: absolute;
+  transform: translate(-50%, -30%);
+  transition: all 0.3s ease;
+}
+
+.modal--is-open .modal__window {
+  transform: translate(-50%, -50%);
+}
+
+.modal--is-open .modal {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0000001a;
+  height: 30px;
+  width: 30px;
+
+  border-radius: 50%;
+  border: 1px solid #0000001a;
+
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.modal__cross {
+  height: 11px;
+  width: 11px;
+}
+
+main:has(.modal--is-open) {
+  overflow: hidden;
 }
